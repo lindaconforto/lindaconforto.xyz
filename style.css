@@ -1,40 +1,35 @@
-ol#gallery{
-    margin: 0px 5%;
-    padding: 0
-    }
-    
-    ol#gallery li{
-    float:left;
-    background-color: #000;
-    color: #fff;
-    margin: 0 0 30px;
-    padding: 0;
-    list-style-type: none
-    }
-    
-    ol#gallery h3{
-    margin: 0;
-    padding: 3px 0 16px;
-    background: #000 url('film.jpg') repeat-x bottom right;
-    color: #fff;
-    font: 12px light arial,sans-serif;
-    text-align: center
-    }
-    
-    ol#gallery a{
-    display: block;
-    padding: 3px 3px 16px;
-    background: #000 url('film.jpg') repeat-x bottom right
-    }
-    
-    ol#gallery a:hover{
-    color: #fff; /*hack per ie5.5 e le regole sotto*/
-    }
-    
-    ol#gallery a img{
-    border: 2px solid #000
-    }
-    
-    ol#gallery a:hover img{
-    border-color: #FFFFA0
-    }
+.galleria {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 15px;
+}
+
+
+.galleria__immagine {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+
+.galleria__elemento--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.galleria__elemento--2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.galleria__elemento--3 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
